@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>List of users</title>
+</head>
+<body>
+    <h1>This is a list of all users</h1>
+
+    <table>
+        <thead>
+            <th>Last Name</th>
+            <th>First Name</th>
+            <th>Email</th>
+        </thead>
+        <tbody>
+            {% for user in users %}
+                <tr>
+                    <td>{{ user.last_name }}</td>
+                    <td>{{ user.first_name }}</td>
+                    <td>{{ user.email }}</td>
+                </tr>
+            {% empty %}
+                <tr>
+                    <td>Nothing here!</td>
+                    <td>Nothing here!</td>
+                    <td>Nothing here!</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

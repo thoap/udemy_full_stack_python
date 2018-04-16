@@ -1,14 +1,33 @@
 <!DOCTYPE html>
-{% load staticfiles %}
+{% load static %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Linux Academy Page</title>
+    <title>Django Level Two</title>
     <link rel="stylesheet" href="{% static "css/mystyle.css" %}">
 </head>
 <body>
-    <h1>Hi this is the logo of the Linux Academy</h1>
-
-    <img src="{% static "images/linAc.png" %}" alt="Linux Academy Logo">
+    <h1>Hi, welcome to Django level two</h1>
+    <h2>Here are your access records:</h2>
+    <div class="djangtwo">
+        {% if access_records %}
+            <table>
+                <thead>
+                    <th>Site Name</th>
+                    <th>Date Accessed</th>
+                </thead>
+                <tbody>
+                    {% for acc in access_records %}
+                        <tr>
+                            <td>{{ acc.name }}</td>
+                            <td>{{ acc.date }}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        {% else %}
+            <p>No access records found!</p>
+        {% endif %}
+    </div>
 </body>
 </html>

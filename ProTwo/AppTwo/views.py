@@ -1,11 +1,11 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from . import models
+from . import forms
 
 
 # Create your views here.
 def index(request):
-    return HttpResponse("<em>Hello World!</em>")
+    return render(request, 'AppTwo/index.html')
 
 
 def help(request):
@@ -14,7 +14,19 @@ def help(request):
 
 
 def user_list(request):
-    list_of_users = models.User.objects.order_by('last_name')
-    context_dict = {'users': list_of_users}
 
-    return render(request, "AppTwo/user_list.html", context_dict)
+    form = forms.NewUserForm()
+
+    if request.method == 'POST':
+        form = forms.NewUserForm(request.POST)
+
+        if form.is_valid():
+            form.save(commit=True)
+
+            return index(request)
+
+        else:
+            print('Error. Invalid Form.')
+
+
+    return render(request, 'AppTwo/user_list.html', {'form': form})

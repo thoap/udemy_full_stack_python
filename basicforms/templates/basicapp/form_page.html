@@ -2,17 +2,16 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Users</title>
+    <title>Forms</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
 </head>
 <body>
+    <h1>Fill out the form!</h1>
     <div class="container">
-        <h1>Please sign up here</h1>
-
         <form action="" method="POST">
             {% csrf_token %}
             {{ form.as_p }}
-            <input type="submit" class"btn btn-primary" value="Submit">
+            <input type="submit" name="" value="save" class="btn btn-primary">
         </form>
     </div>
 </body>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+</head>
+<body>
+    <nav class="navbar navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="{% url 'index' %}">BRAND</a>
+            <ul class="nav nav-pills">
+                <li class="nav-item"><a href="{% url 'index' %}" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="{% url 'admin:index' %}" class="nav-link">Admin</a></li>
+                <li class="nav-item"><a href="{% url 'basic_app:other' %}" class="nav-link">Other</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+    {% block body_block %}
+
+    {% endblock body_block %}
+    </div>
+</body>
+</html>

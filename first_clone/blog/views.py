@@ -1,3 +1,5 @@
+from django.shortcuts import render, get_object_or_404, redirect
+from django.contrib.auth.decorators import login_required
 from django.utils import timezone
 from django.views.generic import (
     TemplateView, ListView, DetailView, CreateView, UpdateView, DeleteView
@@ -59,3 +61,44 @@ class DraftListView(LoginRequiredMixin, ListView):
         ).order_by(
             'created_date'
         )
+
+# --------------------------------------------------------------------------- #
+
+
+@login_required
+def add_comment_to_post(request, pk):
+    post = get_object_or_404(models.Post, pk=pk)
+    if request.method == 'POST':
+        form = forms.CommentForm(request.POST)
+        if form.is_valid():
+            comment = form.save(commit=False)
+            comment.post = post
+            comment.save()
+            return redirect('post_detail', pk=post.pk)
+    else:
+        form = forms.CommentForm()
+
+    return render(request, 'blog/comment_form.html', {'form': form})
+
+
+@login_required
+def comment_approve(request, pk):
+    comment = get_object_or_404(models.Comment, pk=pk)
+    comment.approve()
+
+    return redirect('post_detail', pk=comment.post.pk)
+
+
+@login_required
+def comment_remove(request, pk):
+    comment = get_object_or_404(models.Comment, pk=pk)
+    post_pk = comment.post.pk
+    comment.delete()
+    return redirect('post_detail', pk=post_pk)
+
+
+@login_required
+def post_publish(request, pk):
+    post = get_object_or_404(models.Post, pk=pk)
+    post.publish()
+    return redirect('post_detail', pk=pk)

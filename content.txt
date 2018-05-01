@@ -377,3 +377,17 @@ FIRST CLONE PROJECT
 		--> we are referencing these classes in the JS
 	- use template tag filter "truncatechars"
 	- finish CSS classes
+
+
+SECOND CLONE PROJECT
+
+	Video 2 (Part One)
+	- start project
+	- start app
+	- create static and template folder
+	- settings: template dir, static files, and app set up
+	- initial migrations
+
+	Video 3 (Part 3)
+	- create basic templates
+	- first HomepageView (TemplateView)

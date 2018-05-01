@@ -1,5 +1,5 @@
 .techfont {
-  font-family: 'Vollkorn', serif;
+  font-family: 'Poiret One', sans-serif;
   font-size: 1.5em;
   margin-bottom: 10px;
 }
@@ -39,4 +39,29 @@
   0%{filter: hue-rotate(0deg);}
   100%{filter:hue-rotate(360deg);}
 
+}
+
+.centerstage {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.postdate {
+  text-align: center;
+}
+
+.posttitle {
+    font-family: 'Vollkorn', serif;
+    font-size: 3em;
+    text-align: center;
+}
+
+.postcontent {
+  font-family: 'Vollkorn', serif;
+  font-size: 1.5em;
+}
+
+.btn-comment {
+  position: absolute;
+  right: 0px;
 }

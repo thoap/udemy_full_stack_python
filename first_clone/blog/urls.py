@@ -1,7 +1,7 @@
 from django.conf.urls import url
 from . import views
 
-app_name = 'blog'
+# app_name = 'blog'
 
 urlpatterns = [
     url(r'^$', views.PostListView.as_view(), name='post_list'),
@@ -28,19 +28,19 @@ urlpatterns = [
         name='post_draft_list'
     ),
     url(
-        r'/post/(?P<pk>\d+)/comment/$',
+        r'^post/(?P<pk>\d+)/comment/$',
         views.add_comment_to_post,
         name='add_comment_to_post'),
     url(
-        r'/comment/(?P<pk>\d+)/approve/$',
+        r'^comment/(?P<pk>\d+)/approve/$',
         views.comment_approve,
         name='comment_approve'),
     url(
-        r'/comment/(?P<pk>\d+)/remove/$',
+        r'^comment/(?P<pk>\d+)/remove/$',
         views.comment_remove,
         name='comment_remove'),
     url(
-        r'/post/(?P<pk>\d+)/publish/$',
+        r'^post/(?P<pk>\d+)/publish/$',
         views.post_publish,
         name='post_publish'),
 ]

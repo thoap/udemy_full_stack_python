@@ -1,0 +1,379 @@
+CSS - 2
+	Video 2 (Part One)
+	- Fonts, font-family, font-size, font-style etc
+	- em values, ratio em to px
+	- em in realtion to fontsize defined in body as px
+	- text properties (align, decoration etc)
+
+	Video 3 (Part One ctd.)
+	- use custom web fonts
+	- cssfontstack.com (font availability on different OSs)
+	- embed fonts into a web page
+
+	Video 4 (Part Two)
+	- Box Model
+	- content, padding, border, margin
+
+Bootstrap - 1
+	Video (Part One - Buttons)
+	- Buttons + enable/disable
+		!!! in BS4 "btn-default" does not exist any longer
+	- connect HTML to Bootstrap
+	- Container class
+	- Jumbotron
+
+	Video (Part Two - Forms)
+	- form group (styling/structuring form elements in a nicer way)
+	- form-control (for inputs: rounding corners, stretching container size)
+	- things you should have in your form
+	- small tag with text muted (kind of caption beneath form field)
+	- select/select multiple
+	- fieldset
+	- radio buttons
+	- formcheck
+
+	Video (Part Three - Navbars)
+	- default navbar
+	- right adjust
+	- navbar and container (just wrap the components, not the outer navbar tags)
+	- fixed to top, inverse colors
+	- collapse (to hamburger icon)
+	- dropdown menue
+	- integrate hamburger functionality with javascript
+
+	Video (Part Four - Grid System)
+	- usage of the grid system
+	- nested grid
+	- row
+
+Javascript
+
+LEVEL 1
+
+	Video (Part One - Basics)
+	- console use
+	- basic data types
+	- Variables
+	- basic functions
+		- alert
+		- console.log
+		- prompt
+
+	Video (Part Two - Connecting JS)
+	- adding JS to an HTML (script => src)
+
+	Video (Part Three - Exercises)
+
+	Video (Part Four - Operators)
+	- type checking and type coercion
+	- special beahviour of JS with data types
+		- "2" == 2 (true) vs. "2" === 2 (false)
+		- 5 !== 5 (test for inequality b/w different data types)
+	- basic comparisons
+	- logical operators
+		- 1 === 1 && 2 === 2
+		- 1 === 1 || 1 === 2
+		- !(1 === 1)
+
+	Video (Part Five - Control Flow)
+	- if, else if, else
+
+	Video (Part Six - While Loops)
+	- while condition
+
+	Video (Part Six - For Loop)
+	- three types of for loops
+	- basic for, for/in, for/of
+	- num = num + 1 equals num += 1 equals num++
+
+LEVEL 2
+	Video (Part One - Functions)
+	- how functions work in JS
+	- global and local scope
+
+	Video (Part three - Arrays)
+	- arrays
+	- pop, push, index methods
+	- for of loop
+	- array.forEach(alert)
+
+	Video (Part Five - Objects)
+	- JS objects compared to a python dictionary
+	- embedding functions into JS objects
+	- "this" in the context of an JS object (like self in a python class)
+
+Document Object Model (DOM)
+	Video (Intro)
+	- DOM allows JS to interact with the web page
+	- console.dir(document)
+
+	Video (DOM Part One - DOM Interaction)
+	- grap html elements from the DOM
+	- document attributes: document.URL, document.body, document.head, document.links
+	- methods: document.getElementbyId(), document.getElementsbyClassName(), document.getElementsbyTagName()
+			document.querySelector(), document.querySelectorAll()
+	- difference between e.g. document.getElementbyClassName("myul") and document.querySelectorAll(".myul")
+	- a timed js script, that changes the h1 color every half second
+
+	Video (DOM Part Two - Content Interaction)
+	- grap tags inside other tags (e.g. a inside and li)
+	- get and set attributes on selectors
+
+	Video (DOM Part Three - Events)
+	- role of event listeners (clicks, hovering, drags etc.)
+
+	Exercise
+	- role of "this" in for loop with event listener
+
+JQuery
+	Video 1
+	- interact with the DOM with jquery
+
+
+
+DJANGO
+	PART I
+	- build own templates folder
+	- integrate it with providing a template_dir string in settings
+	- set up static files
+		- images, own css
+	- integrate it with providing a static_dirs list in settings
+
+	PART II
+		Video 4 (Population Scripts)
+		- use faker to populate databases
+		- install faker
+		- generate a population script with Faker
+		- populate the database with fake data
+
+	PART III
+		Video 2 (Django Forms)
+		- What are advantages of Django forms?
+		- create a forms.py
+		- call Django's built in form classes
+		- handle forms in a view
+		- generate subdirectory in templates folder
+		- explanation of GET and POST requests
+		- CSRF token
+
+		Video 3 (Form Basics, Code along)
+		- implement a form in Django
+		- handle a simple post request
+
+		Video 4 (Form Validation)
+		- generate hidden fields in forms
+		- define a very own validator for a field with an own clean method
+		- using Django's built in form field validators
+		- make your own custom validation function
+		- cleaning the entire form at once
+
+	Part IV
+		Video 2 (relative URL with templates)
+		- a few words on Django LTS release cycles (every two years)
+		- {% url ... %}
+		- add your app name in the urls.py file and set it equal to the string name of your app
+			--> ONLY ADD app name there, if you use namespacing in urls
+
+		Video 3 (url coding examples)
+		- url template tagging with app name space ({% url 'basic_app:other' %})
+		- accidental space in that 'basic_app:other' can lead to an error, which is hard to spot
+		- link to the admin page
+			--> whenever you link to external pages set the "http://", like
+				<a class="nav-link" target="_blank" href="http://www.google.com">Google</a>
+
+		Vide4 (Template inheritance)
+		- keep it DRY thru template inheratince
+		- have a base.html file and extend that to other html files
+		- main steps for inheritance
+
+		Video 5 (template inheritance coding example)
+		- coding thru the previously discussed examples
+		- create a base.html and extend that to other html files
+
+	PART V
+		Video 2
+		- installing packages to encrypt passwords
+			--> bcrypt, django[argon2]
+		- password hashers
+		- change password validation in settings
+		- options to password validators
+		- adding template, static and media directory
+			--> difference between media (user provided content)
+				and static (web side creator provided content)
+		- prepare static and media dir and url in settins.py
+
+		Video 3 (user models)
+		- key features of the built-in User object
+		- import that built-in User model
+		- working with images
+			--> install the pillow library
+		- where do JS, CSS and images got? (static root)
+		- where does user uploaded content go? (media root)
+
+		Video 4 (Coding user models and forms Pt. I)
+		- additional User model should not directly inherit from the User model
+			but rather be a model with a one to one relationship to the
+			User model
+		- handle model.ImageField
+			- upload to
+			- set up the belonging folder in the media subdirectory
+				--> make sure pillow library is installed
+
+		Video 5
+		- preparing base, registration and index htmls
+		- create the necessary model forms
+		- preparing all the necessary urls
+
+		Video 6 (Registration)
+		- coding out a whole registration view which handles two forms
+		- look at the password data in the Admin
+			--> change a user's password in the admin
+
+		Video 7 (Login)
+		- set up LOGIN_URL in settings
+		- creating a login form manually
+		- handling a logout for users
+		- making sure only loggen in users can log out with help of decorator
+			--> @login_required
+		- individually display login/logout on home page depending on the
+			user's status (logged in or logged out)
+		- create a view to handle a login request from a user
+
+DJANGO DEPLOYMENT
+
+	Video 1 (Intro to Deployment)
+	- what is still out there to learn (ORMs, CBVs, Payment etc)
+	- focus here will be on deploying with pythonanywhere.com
+
+	Video 2 (setting up github)
+	- quick intro to using Git for version control
+
+	Video 3 (walkthru of full deploy on PthonAnywhere)
+	- set up WSGI file
+	- set up static on PA
+	- setting production mode
+
+CLASS BASED VIEWS
+	Video 1 (Intro to CBVs)
+	- hello world CBV
+
+	Video 2
+	- building a first CBV, that does not even return a template, but just
+		inherits from View
+
+	Video 3 (Template Views)
+	- setting up template views
+	- get_context_data in a cbv
+		--> get_context_data(self, **kwargs)
+	- explanation of *args and **kwargs
+	- adding context to the context variables
+
+	Video 4 (List & Detail Views Pt. I)
+	- setting up the templates folder inside the actual app
+	- set up ListView and DetailView for models
+
+	Video 5 (List & Detail Views Pt. II)
+	- creating templates for the CBCs
+	- automatic naming conventions of context variables by CBVs
+		--> cbv creates a context dictionary with certain naming conventions
+	- name the context object which will be returned by the CBV yourself
+		--> context_object_name
+	- primary keys in Django (automatic setting)
+	- how related_name works
+
+	Video 6 (CRUD-Views in CBV)
+	- making sure to use the 'fields' attribute in those views
+	- CRUD expect certain template names, if you don't provide others
+	- how to use form.instance.pk
+	- get_absolute_url method
+	- specialty of delete views
+	- explain how reverse_lazy works
+	- explain how success_url works in DeleteView
+		--> where should it go, after it has successfully deleted an instance
+			in combination with reverse_lazy
+
+FIRST CLONE PROJECT
+
+	VIDEO 3 (PART 2)
+	- set up blog models (Post and Comment)
+	- provide methods for the the models
+		--> publish a post
+		--> approve a comment
+	- reference the user model through AUTH_USER_MODEL from django.conf.settings
+	-don't execute (i.e. call timezone.now if you use it in model fields inside the models.py)
+
+	Video 4 (Part 3)
+	- create model forms for the models
+	- change the widgets on the model forms
+		--> add attributes like one "class" (or several) to a widget
+		--> differentiate b/w the different form inputs (text input, text area)
+	- set up a static folder inside of the blog app folder (as opposed to hwo we did it previously)
+	- set up static folder in settings.py
+	- set up the template dir inside blog app and in settings.py
+	- set up a LOGIN_REDIRECT_URL
+
+	Video 5 (Part 4)
+	- set up urls and views (CBVs)
+	- get_queryset method in CBVs
+		--> defines how to get the list in a ListView
+	- short intro to field lookups (Django queries to SQL)
+	- shows how to do login required for CBVs
+		--> MixIn: LoginRequiredMixin
+	- set login_url in CBVs
+	- set redirect_field_name
+		--> will redirect them to a certain View
+	- set form_class
+		--> choses a form to be presented, which comes from forms.py
+	- explain how success_url works in DeleteView
+		--> where should it go, after it has successfully deleted an instance
+			in combination with reverse_lazy
+	- filter a queryset on rows which are NULL
+		--> <varname>__isnull=True
+
+	Video 6 (Part 5)
+	- creating templates
+	- creating views (function based views) for comments
+	- explaining the get_object_or_404 method in a view
+	- use a model instance's method on that instance
+	- remove an instance with an FBV
+
+	Video 7 (Part 6)
+	- create login and logout (from dajango.contrib.auth.views)
+		--> logout url with kwargs to got to the homepage afterwards
+	- creating a login page
+	- displaying/handling form errors in a template
+
+	Video 8 (Part 7)
+	- creating all templates, we need
+	- medium, rich text editor
+	- set up all the static files in base.html
+		--> rich text editor (yabwe on github)
+		--> color change (codepen.io)
+		--> set up google fonts
+	- sophisticated navbar
+	- left aligned and right aligned content in navbar
+		!!! in BS 4, two lists with e.g. "ml-auto" or "mr-auto" class
+	- use a bootstrap glyphicon
+		!!! DEPRECATED IN BS4 !!! use e.g. fontawesome instead
+		-->  https://www.w3schools.com/icons/fontawesome_icons_intro.asp to
+			include link
+		--> e.g. <a class="nav-link" href="{% url 'login' %}"><span class="fa fa-user" aria-hidden="true"></span> Login</a>
+			... for login text with user symbol
+
+	Video 9 (Part 8)
+	- filling the tmeplates with live
+		--> post list, post detail, about page
+	- centering stuff in a template (html and css)
+	- format a template tag date in a template
+	- use the count function on a template variable
+	- use the "safe" method on injected content (if it has any raw html in it)
+	- using the empty mehtod on a for loop
+
+	Video 10 (Part 9)
+	- continuing on with the templates
+		--> working on the post form, delete template for posts
+	- setup the JS script to use the rich text editor in the form
+		--> there are some classes attached to the for as widgets
+		--> we are referencing these classes in the JS
+	- use template tag filter "truncatechars"
+	- finish CSS classes

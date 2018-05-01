@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <title>Blog</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <script src="//cdn.jsdelivr.net/npm/medium-editor@latest/dist/js/medium-editor.min.js"></script>
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/medium-editor@latest/dist/css/medium-editor.min.css" type="text/css" media="screen" charset="utf-8">
@@ -13,44 +14,42 @@
 
     <link href="https://fonts.googleapis.com/css?family=Poiret+One|Vollkorn" rel="stylesheet">
 </head>
-<body>
+<body class="loader">
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg techfont navbar-light bg-light">
         <div class="container">
-            <a class="navbar-brand" href="{% url 'post_list' %}">My blog</a>
+            <a class="navbar-brand" href="{% url 'post_list' %}"><span class="fa fa-home"></span> My blog</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                  <a class="nav-link" href="{% url 'about' %}">About</a>
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'about' %}"><span class="fa fa-info"></span> About</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="www.google.com">Google</a>
+                  <a class="nav-link" target="_blank" href="http://www.google.com"><span class="fa fa-external-link"></span> Google</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="www.linuxacademy.com">Linx Academy</a>
+                  <a class="nav-link" target="_blank" href="https://gruen-berlin.de/en/our-parks/gaerten-der-welt"><span class="fa fa-external-link"></span> Gardens of the World</a>
                 </li>
               </ul>
-            </div>
-
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav ml-auto">
                 {% if user.is_authenticated %}
-                    <li class="nav-item active">
-                      <a class="nav-link" href="{% url 'post_new' %}">New Post</a>
+                    <li class="nav-item">
+                      <a class="nav-link" href="{% url 'post_new' %}"><span class="fa fa-pencil"></span> New Post</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="{% url 'post_draft_list' %}">Drafts</a>
+                      <a class="nav-link" href="{% url 'post_draft_list' %}"><span class="fa fa-archive"></span> Drafts</a>
                     </li>
-                    <li >
-                      <a>{{ user.username }}</a>
+                    <li class="nav-item">
+                      <a class="nav-link"><span class="fa fa-user"></span> {{ user.username }}</a>
                     </li>
+                    <li class="nav-item"><a href="{% url 'logout' %}" class="nav-link"><span class="fa fa-sign-out"></span> Log Out</a></li>
                 {% else %}
                     <li class="nav-item">
-                      <a class="nav-link" href="{% url 'login' %}"><span class="glyphicon glyphicon-user"></span></a>
+                      <a class="nav-link" href="{% url 'login' %}"><span class="fa fa-sign-in" aria-hidden="true"></span> Login</a>
                     </li>
                 {% endif %}
               </ul>
@@ -68,5 +67,8 @@
             </div>
         </div>
     </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
 </body>
 </html>

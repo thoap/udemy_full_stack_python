@@ -416,5 +416,13 @@ SECOND CLONE PROJECT
 	- creating urls for login, logout and signup
 	- in main urls.py include the accounts.urls
 		--> giving one url two includes
+		--> THERE SHOULDN'T BE "$" at the end of the pattern before a call
+			to include() in urls.py
 		--> using the namespace keyword for later reference in reverse
 	- link base.html to an own master-CSS fiel in static
+	- taking care of a navbar for authenticated and unknown users
+
+	Video 5 (Part 4)
+	- set login/logout redirect URL in settings.py
+		--> creating templates for those redirects
+		--> set those up in views.py and urls.py

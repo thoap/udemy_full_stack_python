@@ -426,3 +426,9 @@ SECOND CLONE PROJECT
 	- set login/logout redirect URL in settings.py
 		--> creating templates for those redirects
 		--> set those up in views.py and urls.py
+
+	Video 6 (Part 5)
+	- starting two new apps
+		--> posts
+		--> groups
+	- creating all necessary empty html files

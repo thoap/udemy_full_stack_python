@@ -4,6 +4,7 @@ cffi==1.11.5
 Django==1.11
 django-bootstrap4==0.0.6
 Faker==0.8.13
+misaka==2.1.0
 Pillow==5.1.0
 pycparser==2.18
 python-dateutil==2.7.2

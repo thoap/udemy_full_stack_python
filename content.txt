@@ -432,3 +432,17 @@ SECOND CLONE PROJECT
 		--> posts
 		--> groups
 	- creating all necessary empty html files
+
+	Video 7 (Part 6)
+	- setting up the groups app
+	- installing misaka (for link embedding)
+	- groups: models.py
+		--> using the get_user_model() function
+		--> unique_togeter in Meta
+		--> ManyToMany/Intermediate Model
+		--> slugify method
+		--> Meta order
+	- posts: models.py
+		--> auto_now=True in DateTimeField
+	 	--> related_name
+

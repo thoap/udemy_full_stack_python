@@ -446,3 +446,13 @@ SECOND CLONE PROJECT
 		--> auto_now=True in DateTimeField
 	 	--> related_name
 
+	Video 8 (Part 7)
+	- views for groups
+	- templates for groups
+	- several blocks in one template
+	- group detail page
+		- using {% include %}
+			--> like extending, just injecting in the middle of an html
+	- group list page
+		- using object_list
+		- using count and pluralize template tags

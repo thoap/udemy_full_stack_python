@@ -456,3 +456,8 @@ SECOND CLONE PROJECT
 	- group list page
 		- using object_list
 		- using count and pluralize template tags
+
+	Video 9 (Part 8)
+	- set up group urls
+	- registering group models in admin
+		--> setting up an inline model in the admin

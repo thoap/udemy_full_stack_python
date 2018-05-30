@@ -461,3 +461,16 @@ SECOND CLONE PROJECT
 	- set up group urls
 	- registering group models in admin
 		--> setting up an inline model in the admin
+
+	Video 10 (Part 9)
+	- install django braces
+		--> using SelectRelatedMixin
+		--> allows to select a tuple of related models
+	- providing template names in views
+	POSTLISTVIEW
+	- using get_queryset()
+	- using get_context_data()
+		--> updating the context dictionary that the view comes with
+	Detail, Create and Delete view
+	- more methods, like "delete" and "form_valid"
+	- views for posts

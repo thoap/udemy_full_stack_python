@@ -3,7 +3,7 @@ from . import views
 
 app_name = 'groups'
 
-url_patterns = [
+urlpatterns = [
     url(r'^$', views.ListGroups.as_view(), name='all'),
     url(r'^new/$', views.CreateGroup.as_view(), name='create'),
     url(

@@ -474,3 +474,9 @@ SECOND CLONE PROJECT
 	Detail, Create and Delete view
 	- more methods, like "delete" and "form_valid"
 	- views for posts
+
+	Video 11 (Part 10)
+	- generates all post html files
+	- uses hide_delete=True in an include statement
+
+	Video 12 (Part 11)
